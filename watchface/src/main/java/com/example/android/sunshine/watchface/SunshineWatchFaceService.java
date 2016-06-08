@@ -126,7 +126,7 @@ public class SunshineWatchFaceService extends CanvasWatchFaceService {
             Resources resources = SunshineWatchFaceService.this.getResources();
 
             mBackgroundPaint = new Paint();
-            mBackgroundPaint.setColor(resources.getColor(R.color.background));
+            mBackgroundPaint.setColor(resources.getColor(R.color.primary));
 
             mTextTimePaint = new Paint();
             mTextTimePaint = createTextTimePaint(resources.getColor(R.color.digital_text));
@@ -154,7 +154,7 @@ public class SunshineWatchFaceService extends CanvasWatchFaceService {
             paint.setColor(textColor);
             paint.setTypeface(NORMAL_TYPEFACE);
             paint.setAntiAlias(true);
-            paint.setTextSize(getResources().getDimension(R.dimen.digital_text_size));
+            paint.setTextSize(getResources().getDimension(R.dimen.digital_time_text_size));
             return paint;
         }
 
@@ -163,6 +163,7 @@ public class SunshineWatchFaceService extends CanvasWatchFaceService {
             paint.setColor(textColor);
             paint.setTypeface(NORMAL_TYPEFACE);
             paint.setAntiAlias(true);
+            paint.setTextSize(getResources().getDimension(R.dimen.digital_date_text_size));
             return paint;
         }
 
